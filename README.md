@@ -1,6 +1,6 @@
-# ChaiZi :link: https://chaizib.github.io/ 
-### :page_facing_up: [76](https://chaizib.github.io//tag.html) 
+# ChaiZi :link: https://chaizi.cc 
+### :page_facing_up: [77](https://chaizi.cc/tag.html) 
 ### :speech_balloon: 0 
-### :hibiscus: 157910 
-### :alarm_clock: 2024-12-13 15:26:17 
+### :hibiscus: 158582 
+### :alarm_clock: 2024-12-13 15:57:22 
 ### Powered by :heart: [Gmeek](https://github.com/Meekdai/Gmeek)
