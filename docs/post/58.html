@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark_colorblind" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://raw.githubusercontent.com/chaizia/Profiles/master/faviconico/favicon.ico"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="&emsp;&emsp;用Firefox也有些时间了，不过上手还是算晚的，大约是3.0版本的时候，09年吧。">
+<meta property="og:title" content="我和骚狐狸的那点事儿">
+<meta property="og:description" content="&emsp;&emsp;用Firefox也有些时间了，不过上手还是算晚的，大约是3.0版本的时候，09年吧。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://chaizib.github.io//post/58.html">
+<meta property="og:image" content="https://raw.githubusercontent.com/chaizia/Profiles/master/faviconico/chaizi.svg">
+<title>我和骚狐狸的那点事儿</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+.copy-feedback {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    color: var(--color-fg-on-emphasis);
+    background-color: var(--color-fg-muted);
+    border-radius: 3px;
+    padding: 5px 8px;
+    font-size: 12px;
+}
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">我和骚狐狸的那点事儿</h1>
+<div class="title-right">
+    <a href="https://chaizib.github.io/" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/chaizib/chaizib.github.io/issues/58" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><p>  用Firefox也有些时间了，不过上手还是算晚的，大约是3.0版本的时候，09年吧。在那之前一直是opera，后来在群里听人说的多了，于是尝试了一下，结果干柴遇上烈火一发不可收拾，彻底沦陷到现在并且毫不知悔改，哈哈。</p>
+<p>  初上手时是新奇，后来是折腾，到后来是精简，到如今只追求实用。脚本和扩展是从开始的越用越多到现在越来越少，但定制内容却是越来越贴近个人习惯。火狐就是这么个浪蹄子，你用得越多就越适合你，互动得越多就越XX和谐。闲话少说，现在正式开篇：</p>
+<h3>版本选择</h3>
+<p>  先从版本开始说起吧，到现在为止我依然用着3.6.23，所以请不要饱含优越感的给我来一句7.0路过、8.0飘过、9.0沙发，我知道某Firefox版区全是这种盲目追新的傻逼，事实上这些傻逼连每夜版的ftp地址都不知道，更别指望他能告诉你每夜版更新了什么内容，解决了哪些问题。</p>
+<p>  mozilla现在跟着Google学坏了，和chrome一样使劲的飙版本号，5678这些大版本其实应该视为4.2、4.21、4.3这样才对。而3.6之后的版本有一个致命缺陷就是内存泄露，再就是平时的内存释放问题(比如关闭所有标签之后内存依然居高不下)，虽然有人声称7的内存控制已经有所改善，但和3.6比起来却是远远不如了。可以说在新版本的内存控制没有彻底完善之前，没有尝新的必要，事实上在Firefox.net和mozest这些论坛上，很多老人也一样的坚守着3.6。</p>
+<p>  版本固定在3.6，然后选择是用官方原版或者第三方优化编译版（那些用火狐中国版的请马上关闭页面自行滚蛋），个人建议是tete009编译的第三方，优势是JS和图片浏览，特别是对于我这样的CG和动漫爱好者以及你这样的AV自拍图片爱好者来说，这一点尤为重要，毕竟，多图杀猫那是每个爱好者心中永远的痛啊……</p>
+<p>  tete009的下载地址：（<a href="http://www1.plala.or.jp/tete009/en-US/software.html#FIREFOX" rel="nofollow">tete009官方下载</a>）根据CPU不同自行选择SSE和SSE2 （不懂区别请自行Google，Google不到用百度，百度不到用bing，bing不到去死），下载后，其源代码目录Source 可以精简删除，除Firefox.exe之外的所有exe文件可以删除，在此我贴一下我的Firefox目录文件列表，以供参考：（<a href="http://dl.dbank.com/c0pxwxrq3t" rel="nofollow">dir.txt 下载</a>）</p>
+<h3>中文化</h3>
+<p>  Firefox国际版选择语言直接包含简体中文版，在此不用考虑。下载tete00、Pale Moo或者陵川版，则需要在首次启动前直接修改相关文件，在此不推荐网上所说那些什么安装中文语言扩展的不够洁癖的办法。</p>
+<p>  首先在Mozilla的Ftp找到最新版的语言包(文件格式为xpi) 并下载下来，<a href="http://stage.mozilla.org/pub/mozilla.org/firefox/releases/" rel="nofollow">http://stage.mozilla.org/pub/mozilla.org/firefox/releases/</a> ，在此以3.6.23为例，则地址是 <a href="http://stage.mozilla.org/pub/mozilla.org/firefox/releases/3.6.23/win32/xpi/zh-CN.xpi" rel="nofollow">http://stage.mozilla.org/pub/mozilla.org/firefox/releases/3.6.23/win32/xpi/zh-CN.xpi</a> ，下载下来用winrar或其他压缩软件解压，解压后用记事本打开chrome.manifest，替换全部 "jar:chrome/" 为 "jar:" ，重命名为zh-CN.manifest，与解压出来的zh-CN.jar一起复制到FireFox程序所在目录的chrome文件夹里。</p>
+<p>  然后用记事本打开Firefox程序所在目录的\defaults\pref\firefox-l10n.js，替换其中的en-US改为zh-CN。</p>
+<p>  最后用下面提到的绿化引导启动之后，在地址栏里输入"about:config" 回车，然后在过滤器里输入general.useragent.locale，双击该项然后再弹出的对话框里输入"zh-CN"，确定，重启浏览器后中文化完毕。</p>
+<h3>便携绿化</h3>
+<p>  作为一个有轻度洁癖的人，像Firefox这种完全可以绿色的东西我是绝对不会使用安装版的，况且我的系统分区常年呆在影子下。便携版制作其实相当方便，在此以tete009为例，说说我采用的三种方法。</p>
+<ul>
+<li>
+<p>1、蓝冰引导器（下载地址）：这是我最喜欢的方式，省事，方便，首次启动可以选择是否设置成默认浏览器、添加桌面快捷方式等。默认会在当前目录声称一个profile文件夹。</p>
+</li>
+<li>
+<p>2、参数启动Firefox.exe：利 -profile 参数来指定配置文件夹启动Firefox，最典型的办法就是用快捷方式来引导，在目标一栏添加参数，例如：D:\SOFT\FF\Firefox\firefox.exe -profile "D:\SOFT\FF\profiles"</p>
+</li>
+<li>
+<p>3、Tete009版本：tete009自带便携绿化功能，下载 <a href="http://www1.plala.or.jp/tete009/software/mozilla/tmemutil.ini" rel="nofollow">tmemutil.ini</a>  到Firefox根目录和Firefox.exe一起，修改Portable=1即可。会在当前目录生成一个PortableData配置文件夹。此方式声称的配置文件夹内目录结构和常用有别，手动修改不方便，极不推荐。</p>
+</li>
+</ul>
+<p>我个人使用的就是蓝冰引导器，其目录结构如下（下文将以此目录为示范，不再解释）</p>
+<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213142205870.png></p>
+<h3>优化参数</h3>
+<p>  用引导器启动火狐后，先设置中文（见上文），然后继续优化相关参数，在about:config中设置如下（#后为说明注释，非选项或者填写内容；个人倾向严重，自己看注释决定）：</p>
+<p>  新建字符串browser.cache.disk.parent_directory ，在弹出对话框输入缓存路径，比如我的是设置缓存目录到内存盘G:\Temp\Firefox</p>
+<pre class="notranslate"><code class="notranslate">#取消安装扩展3秒等待
+security.dialog_enable_delay，0
+#火狐自带平滑滚动
+mousewheel.acceleration.factor，4
+mousewheel.acceleration.start，3
+mousewheel.withnokey.numlines，7
+#书签自动保存到bookmarks.html
+browser.bookmarks.autoExportHTML，ture
+#标签最大宽度
+browser.tabs.tabMaxWidth，187
+#标签最小宽度
+browser.tabs.tabMinWidth，50
+#撤销关闭网页数目
+browser.sessionstore.max_tabs_undo，20
+#关闭最后一个标签不退出Firefox
+browser.tabs.closeWindowWithLastTab，false
+#禁用IPV6
+network.dns.disableIPv6，true
+#搜索栏新建标签打开搜索
+browser.search.openintab，true
+#连接数相关
+network.http.max-connections，48
+network.http.max-connections-per-server，24
+network.http.max-persistent-connections-per-proxy，12
+#允许Javascript移动改变窗口位置和尺寸
+dom.disable_window_move_resize，ture
+#提速相关
+network.http.pipelining，true
+network.http.pipelining.maxrequests，8
+network.http.pipelining.ssl，ture
+network.http.proxy.pipelining，ture
+network.http.request.max-start-delay，5
+#关闭下载后提示、查毒(鸡肋功能)
+browser.download.manager.showalertOnComplete，false
+browser.download.manager.scanWhenDone，false 
+#开启远程DNS解析
+network.proxy.socks_remote_dns，ture
+#去除播放flash时独立进程
+dom.ipc.plugins.enabled，false
+dom.ipc.plugins.enabled.npctrl.dll，false
+dom.ipc.plugins.enabled.npqtplugin.dll，false
+dom.ipc.plugins.enabled.npswf32.dll，false
+dom.ipc.plugins.enabled.nptest.dll，false
+#地址栏默认搜索
+network.standard-url.encode-utf8，false
+network.enableIDN，false
+keyword.URL修改为
+https://encrypted.google.com/search?ie=utf-8&amp;oe=utf-8&amp;rls=org.mozilla:en-US:unofficial&amp;client=firefox&amp;q=#关闭列出所有标签页
+browser.allTabs.previews，false
+</code></pre>
+<h4>profiles\chrome\userChrome.css部分：</h4>
+<pre class="notranslate"><code class="notranslate">/* 去除无用右键菜单 */
+#context-back,
+#context-forward,
+#context-openlink, 
+#context-stop,
+#subscribeToPageMenuitem,
+#subscribeToPageMenupopup
+{ display: none !important; }
+/*  去除地址栏RSS图标 */
+#feed-button{display:none;}
+/* 更圆滑的地址栏、搜索栏、页面查找栏 */
+#urlbar, .searchbar-textbox,.findbar-textbox {
+-moz-appearance: none !important;
+-moz-border-radius: 2px !important;
+padding-right: 2px !important;
+padding-left: 2px !important;}
+/*  隐藏书签无用选项 */
+menuitem[key="addBookmarkAsKb"],
+menuitem[key="manBookmarkKb"],
+menuitem[key="bookmarkAllTabsKb"],
+menu[id="bookmarksToolbarFolderMenu"],
+menu[id="bookmarksToolbarFolderMenu"]+menuseparator {display: none !important;}
+#bookmarks-button dropmarker {display: none !important;}
+/* 合并刷新及停止按钮 */
+#stop-button[disabled="true"] { display:none; }
+#stop-button:not([disabled]) + #reload-button { display:none; }
+/* 最后标签的关闭按钮 */
+.tabbrowser-tabs:not([closebuttons="noclose"]):not([closebuttons="closeatend"]) &gt; .tabbrowser-tab[selected="true"] &gt; .tab-close-button {display: -moz-box !important;}
+.tabbrowser-tabs[closebuttons="alltabs"] &gt; .tabbrowser-tab &gt; .tab-close-button {display: -moz-box !important;}
+/* 隐藏菜单栏 */
+#toolbar-menubar {display:none;}
+</code></pre>
+<h3>扩展插件推荐</h3>
+<p>  直到现在，还有很多人搞不清楚扩展和插件的区别，直接上图：</p>
+<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213142659185.png></p>
+<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213142712778.png></p>
+<h3>油猴子、UC脚本推荐</h3>
+<p>  最好使用我上文提供的油猴子旧版本扩展，不要自行下载最新版，否则部分脚本会失效，比如try_again.user.js</p>
+<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213142910219.png></p>
+<p>  安装完扩展userChromeJS-1.2.xpi后，用记事本打开FF\profiles\chrome\userChrome.js，最后一行添加【 userChrome.import("*", "UChrm"); 】，便能正常使用UC脚本，下载UC脚本至FF\profiles\chrome目录即可（重启浏览器生效）</p>
+<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213142944557.png></p>
+<p>  <strong>IEView.uc.js</strong>：个人相当欣赏的脚本，现在不兼容火狐only IE的不规范站点是越来越少了，所以没必要为了那种一个月不见得浏览一次的垃圾站点而安装IE Tab这种庞然大物，直接用右键菜单调用IE或者其他浏览器打开就行（支持空白处右键打开该页，或者链接处打开该链接），我的脚本默认是theworld，修改成IE只须两处：第7行的\u7528TheWorld\u67E 名称部分，可以替换成IE；第30行的路径 D:\soft\TheWorld\TheWorld.exe 替换成 %ProgramFiles%\Internet Explorer\IEXPLORE.EXE 即可。</p>
+<p>  其他油猴子脚本，有很多被我二次修改过，在此就不一一细说了，火狐玩的就是一个折腾。油猴子和UC脚本下载地址：<a href="http://dl.dbank.com/c035ak7bu3" rel="nofollow">http://dl.dbank.com/c035ak7bu3</a></p>
+<h3>个人分享</h3>
+<h4>一些不错的书签，直接右键“将此链接加为书签”即可：</h4>
+<ul>
+<li>网页自动刷新</li>
+<li>Google站内搜索</li>
+<li>Google当前页快照</li>
+<li>谷歌翻译</li>
+<li>有道翻译</li>
+<li>汉典释义</li>
+</ul>
+<h4>FireGestures脚本分享示例：</h4>
+<ul>
+<li>1：打开文件或者文件夹</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">var file = Cc['@mozilla.org/file/local;1'].createInstance(Ci.nsILocalFile);
+file.initWithPath("D:\\Soft\\FF\\proxy.txt");
+file.launch();
+</code></pre>
+<ul>
+<li>2：菜单</li>
+</ul>
+<pre class="notranslate"><code class="notranslate">FireGestures.generatePopup(event,
+[
+{ label: "FF目录", oncommand: "firefox();" },
+{ label: "goagent", oncommand: "goagent();" },
+{ label: "ssh", oncommand: "ssh();" },
+]
+);
+firefox= function(){
+var file = [Cc['@mozilla.org/file/local;1'].createInstance(Ci.nsILocalFile);](mailto:Cc[%27@mozilla.org/file/local;1%27].createInstance%28Ci.nsILocalFile%29;)file.initWithPath("D:\\SOFT\\FF\\");
+file.launch();
+}
+goagent= function(){
+var file = [Cc['@mozilla.org/file/local;1'].createInstance(Ci.nsILocalFile);](mailto:Cc[%27@mozilla.org/file/local;1%27].createInstance%28Ci.nsILocalFile%29;)file.initWithPath("D:\\SOFT\\unblock\\goagent\\local\\goagent.exe");
+file.launch();
+}
+ssh= function(){
+var file = [Cc['@mozilla.org/file/local;1'].createInstance(Ci.nsILocalFile);](mailto:Cc[%27@mozilla.org/file/local;1%27].createInstance%28Ci.nsILocalFile%29;)
+file.initWithPath("D:\\SOFT\\unblock\\ssh\\ssh.exe");
+file.launch();
+}
+</code></pre>
+<ul>
+<li>3：和书签配合手势</li>
+</ul>
+<p>  以上面的书签“谷歌翻译”为例，修改该书签关键字为“ggfanyi”，然后在FireGestures中添加脚本，名称“整页Google翻译”，脚本：<br>
+loadURI(getShortcutOrURI("ggfanyi",{}));<br>
+动作为RL。 此时浏览任意外文网站时，按住鼠标右键→ ← 则可以看到翻译效果。</p>
+<p>  我的鼠标手势脚本分享（直接上备份吧，请自行备份自己的设置）<a href="http://dl.dbank.com/c0xagwayap" rel="nofollow">http://dl.dbank.com/c0xagwayap</a></p>
+<h4>proxy.txt写法和应用</h4>
+<p>  proxy.txt其实就是autoproxy.pac的简化版，改后缀成txt是为了方便平时修改。其写法很简单，直接示例吧：</p>
+<pre class="notranslate"><code class="notranslate">var patterns = new Array(
+"t.co/",
+"gravatar.com/",
+"flickr.com",
+"blogger.com",
+"torproject.org"
+);
+function FindProxyForURL(url, host)
+{for (i in patterns)
+{if( url.indexOf( patterns[i] ) &gt;= 0 )
+{return "SOCKS5 127.0.0.1:7070";}}
+return "DIRECT";}
+</code></pre>
+<p>  注意一点即可，除了红色部分的最后一行外，前面的网址后记得有英文逗号(我是经常忘的- -#)。示例的是socks5代理端口7070，如果是http代理的话，则替换上文绿色部分为PROXY 127.0.0.1:1080 （以http代理端口1080为例）</p>
+<p>  proxy搭配前面推荐扩展multiproxy，效果极好。打开multiproxy ，新建一个auto的代理设置让其读取proxy.txt的内容，自动选择是否走代理，如图：</p>
+<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213143338335.png></p>
+<p>  然后新建一个all来全局走代理，如图：</p>
+<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213143400022.png></p>
+<p>  最后来张裸照：</p>
+<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213143420597.png></p>
+</div>
+<div style="font-size:small;margin-top:8px;float:right;">❤️ 转载文章请注明出处，谢谢！❤️</div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://chaizib.github.io/">ChaiZi</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if("10/01/2007"!=""){
+    var startSite=new Date("10/01/2007");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z', 'copy': 'M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z', 'check': 'M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek main https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const createClipboardHTML = (codeContent, additionalClasses = '') => `
+        <pre class="notranslate"><code class="notranslate">${codeContent}</code></pre>
+        <div class="clipboard-container position-absolute right-0 top-0 ${additionalClasses}">
+            <clipboard-copy class="ClipboardButton btn m-2 p-0" role="button" style="display: inherit;">
+                <svg height="16" width="16" class="octicon octicon-copy m-2"><path d="${IconList["copy"]}"></path></svg>
+                <svg height="16" width="16" class="octicon octicon-check color-fg-success m-2 d-none"><path d="${IconList["check"]}"></path></svg>
+            </clipboard-copy>
+            <div class="copy-feedback">Copied!</div>
+        </div>
+    `;
+
+    const handleCodeElements = (selector = '') => {
+        document.querySelectorAll(selector).forEach(codeElement => {
+            const codeContent = codeElement.innerHTML;
+            const newStructure = document.createElement('div');
+            newStructure.className = 'snippet-clipboard-content position-relative overflow-auto';
+            newStructure.innerHTML = createClipboardHTML(codeContent);
+
+            const parentElement = codeElement.parentElement;
+            if (selector.includes('highlight')) {
+                parentElement.insertBefore(newStructure, codeElement.nextSibling);
+                parentElement.removeChild(codeElement);
+            } else {
+                parentElement.parentElement.replaceChild(newStructure, parentElement);
+            }
+        });
+    };
+
+    handleCodeElements('pre.notranslate > code.notranslate');
+    handleCodeElements('div.highlight > pre.notranslate');
+
+    let currentFeedback = null;
+    document.querySelectorAll('clipboard-copy').forEach(copyButton => {
+        copyButton.addEventListener('click', () => {
+            const codeContent = copyButton.closest('.snippet-clipboard-content').innerText;
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = codeContent;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+
+            const copyIcon = copyButton.querySelector('.octicon-copy');
+            const checkIcon = copyButton.querySelector('.octicon-check');
+            const copyFeedback = copyButton.nextElementSibling;
+
+            if (currentFeedback && currentFeedback !== copyFeedback) {currentFeedback.style.display = 'none';}
+            currentFeedback = copyFeedback;
+
+            copyIcon.classList.add('d-none');
+            checkIcon.classList.remove('d-none');
+            copyFeedback.style.display = 'block';
+            copyButton.style.borderColor = 'var(--color-success-fg)';
+
+            setTimeout(() => {
+                copyIcon.classList.remove('d-none');
+                checkIcon.classList.add('d-none');
+                copyFeedback.style.display = 'none';
+                copyButton.style.borderColor = '';
+            }, 2000);
+        });
+    });
+});
+
+</script>
+
+
+</html>
