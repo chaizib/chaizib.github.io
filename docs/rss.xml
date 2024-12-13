@@ -1,8 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>ChaiZi</title><link>https://chaizib.github.io/</link><description>一个在当地以英俊而知名的普通人罢了</description><copyright>ChaiZi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/chaizia/Profiles/master/faviconico/chaizi.svg</url><title>avatar</title><link>https://chaizib.github.io/</link></image><lastBuildDate>Fri, 13 Dec 2024 03:01:19 +0000</lastBuildDate><managingEditor>ChaiZi</managingEditor><ttl>60</ttl><webMaster>ChaiZi</webMaster><item><title>世无芳草</title><link>https://chaizib.github.io//post/4.html</link><description>和媳妇约定写的第二篇&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>ChaiZi</title><link>https://chaizib.github.io/</link><description>一个在当地以英俊而知名的普通人罢了</description><copyright>ChaiZi</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/chaizia/Profiles/master/faviconico/chaizi.svg</url><title>avatar</title><link>https://chaizib.github.io/</link></image><lastBuildDate>Fri, 13 Dec 2024 03:03:04 +0000</lastBuildDate><managingEditor>ChaiZi</managingEditor><ttl>60</ttl><webMaster>ChaiZi</webMaster><item><title>世无芳草</title><link>https://chaizib.github.io//post/4.html</link><description>和媳妇约定写的第二篇&#13;
 这一次，无花自述～ `o`(2006-01-15 22:21:44)&#13;
 &#13;
-如你所知，我是一个和尚，然而这么说也不尽对，应该是我看起来象个和尚，我是光头，我穿着袈裟。</description><guid isPermaLink="true">https://chaizib.github.io//post/4.html</guid><pubDate>Fri, 13 Dec 2024 03:00:58 +0000</pubDate></item><item><title>看花回</title><link>https://chaizib.github.io//post/3.html</link><description>以前写的小说，那时候和媳妇儿热恋中&#13;
+如你所知，我是一个和尚，然而这么说也不尽对，应该是我看起来象个和尚，我是光头，我穿着袈裟。</description><guid isPermaLink="true">https://chaizib.github.io//post/4.html</guid><pubDate>Fri, 13 Dec 2024 03:00:58 +0000</pubDate></item><item><title>WordPress文章段落行首空格</title><link>https://chaizib.github.io//post/5.html</link><description>&amp;emsp;&amp;emsp;关于WordPress文章段落首行空格的问题，WordPress在用Mozilla Firefox、谷歌浏览器Chrome、Opera这些浏览器编辑文章的时候，段落空格都会无效只能在HTML中写&amp;nbsp; 或者切换到，HTML源代码编辑器，再用空格这样才能实现段落文字缩进的效果!&#13;
+如用不是用这些方法Firefox、Chrome、Opera下面编辑发表文章每段前的空格总会变没有了！具体什么原因也不想研究，具体解决方法有如下两种:&#13;
+&#13;
+&amp;emsp;&amp;emsp;第一种方法：直接用IE，行首空两个全角空格即可！这样就不会出现段落首行空格失效！（但搞网站的很少人用IE的了）&#13;
+&#13;
+&amp;emsp;&amp;emsp;第二种方法：使用CSS,用CSS控制&lt;p&gt; 在使用的主题CSS中加入如下代码？&#13;
+&#13;
+```&#13;
+p{text-indent:2em;}&#13;
+img{text-indent:2em;}&#13;
+```&#13;
+&#13;
+&lt;!-- ##{'timestamp':1195003355}## --&gt;。</description><guid isPermaLink="true">https://chaizib.github.io//post/5.html</guid><pubDate>Wed, 14 Nov 2007 01:22:35 +0000</pubDate></item><item><title>看花回</title><link>https://chaizib.github.io//post/3.html</link><description>以前写的小说，那时候和媳妇儿热恋中&#13;
 于是有个约定，虚拟自己和对方的故事，时间定在过去&#13;
 无论离聚，无关悲喜，只求有趣&#13;
 有趣的是，必须反串，我写女方，媳妇写男方&#13;
