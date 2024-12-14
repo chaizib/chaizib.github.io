@@ -2,7 +2,7 @@
 
 &emsp;&emsp;重启之后看了下事件管理器，发现有“组策略客户端扩展 脚本 执行失败。请查看此扩展先前报告的所有错误。”如图：
 
-`Gmeek-html<img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213141858917.png>`
+`Gmeek-html<img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213141858917.png>`
 
 &emsp;&emsp;果断检查开机关机脚本，因为我一直用一个关机脚本，关机时自动删除Firefox的浏览记录、书签、cookies和密码，打开C:\WINDOWS\system32\GroupPolicy\Machine\Scripts一看，果然没有了scripts.ini，新建了一个搞定，重启后错误解决。
 
