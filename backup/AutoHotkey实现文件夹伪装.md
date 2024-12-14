@@ -2,7 +2,7 @@
 
 &emsp;&emsp;在BBS上翻老帖，看到有个文件夹伪装的比较好玩，好几年前曾经试过修改desktop.ini来伪装文件夹，嘎嘎，试试用AutoHotkey能不能实现，各种给力，FileAppend是个好命令o。
 
-`Gmeek-html<img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213121501924.png>`
+`Gmeek-html<img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213121501924.png>`
 
 &emsp;&emsp;脚本代码如下：
 
