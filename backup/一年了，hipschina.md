@@ -54,6 +54,6 @@
 > 本坛最屌鸡蛋派：shine，单身熟男，骑萝卜的猪
 > 本坛最帅长相派：柴子和全坛网友 - -!
 
-`Gmeek-html<img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213130611253.png>`
+`Gmeek-html<img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213130611253.png>`
 
 <!-- ##{"timestamp":1299482736}## -->
