@@ -10,7 +10,7 @@
 
 PS：实名谴责AirPods 3，脑残似的改成这么傻短粗，磨合硬撑了四个月，耳朵眼子依然生疼…… shit！
 
-`Gmeek-html<img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213152231191.png>`
+`Gmeek-html<img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213152231191.png>`
 
 
 <!-- ##{"timestamp":1647311136}## -->
