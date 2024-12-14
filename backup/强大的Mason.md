@@ -11,21 +11,21 @@
 - 2.反盗链（自定义）：（返回任意指定referer，不能为空）
 - 3.指定http头：（referer，值任意，可以为空值）
 
-`Gmeek-html<img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213145050794.png>`
+`Gmeek-html<img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213145050794.png>`
 
 ### 同步下载在线视频/音乐
 &emsp;&emsp;这个无需多说，无图无真相的贴图一张，不用解释：
 
-`Gmeek-html<img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213145111737.png>`
+`Gmeek-html<img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213145111737.png>`
 
 ### 自定义HTTP头
 &emsp;&emsp;这玩意其实好玩的用处主要三个，第一个利用accept-language设置网站语言，第二个利用X-Forwarded-For来伪装IP，第三就是修改user-agent。在此帖几张图：
 
-`Gmeek-html<img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213145142412.png>`
+`Gmeek-html<img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213145142412.png>`
 
-`Gmeek-html<img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213145200762.png>`
+`Gmeek-html<img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213145200762.png>`
 
-`Gmeek-html<img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213145214217.png>`
+`Gmeek-html<img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213145214217.png>`
 
 
 <!-- ##{"timestamp":1343269536}## -->
