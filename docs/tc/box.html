@@ -1,0 +1,20 @@
+<!DOCTYPE html>    
+<html lang="en">    
+<head>    
+	<meta charset="UTF-8">    
+	<meta http-equiv="refresh" content="0;url=index.html"> 
+	<title>随机抽仨</title>
+</head>    
+<body>    
+	<script>    
+var arr = [57001,57006,57009,57019,57023,57025,57026,57027,57028,57030,57037,57039,57044,57047,57050,57053,57054,57055,57057,57058,57062,57065,59007,59008,59009,59012,59013,59038,59042,59045,59046,59047,59048,59049,59050,59051,59059,59061,59064,59068,59070,59073,59075,59077,59079,59080,59086,59087,59088,59089,59090,59091,59092,59092];    
+var out = [];    
+var num = 3;    
+while(out.length < num){    
+var temp = (Math.random()*arr.length) >> 0;    
+out.push(arr.splice(temp,1));    
+}    
+alert(out);    
+	</script>    
+</body>    
+</html>
