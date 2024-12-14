@@ -2,11 +2,11 @@
 
 &emsp;&emsp;看了一会帮助文件，发现比当初用过的按键精灵什么的舒服多了，试着做了一个模拟按键点技能的东西在wow中试了一下，感觉很不错。我下载的是AutoHotkey V1.0.48.05 ，顺手把壳扒了『UPX壳真的很龊』，汉化了部分，看起来顺眼多了
 
-`Gmeek-html<img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213121234513.gif>`
+`Gmeek-html<img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213121234513.gif>`
 
 &emsp;&emsp;昨天写过一个代替myentunnel的东西，ss大牛立马丢出来一个更好看的在[11楼](http://hipschina.com/viewthread.php?tid=2722&page=1&fromuid=4#pid26160)，大受刺激，下载源码后学了一下，然后查了下gui的写法，受益颇多 :) 刚好老婆要我烧水『家里用电磁炉配水壶烧水，我经常上网烧忘记了』，于是试试用AutoHotkey写个定时器，很容易三分钟就写出来了，很舒服。比用别的工具要简单的多。
 
-`Gmeek-html<img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213121313060.gif>`
+`Gmeek-html<img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213121313060.gif>`
 
 &emsp;&emsp;代码如下：『菜鸟习作，勿笑，敬请指点』
 
