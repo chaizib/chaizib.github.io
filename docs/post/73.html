@@ -67,6 +67,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         </svg>
     </a>
     
+    <a href="https://github.com/chaizib/chaizib.github.io/issues/73" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
 
     <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
         <svg class="octicon" width="16" height="16" >
@@ -88,7 +94,7 @@ RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
 &lt;/IfModule&gt;
 </code></pre>
 <p>  然后typecho后台 “设置”--“永久链接”中启用rewrite功能即可。</p>
-<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213150858631.png></p>
+<p><img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213150858631.png></p>
 <p>  其实还有更简洁的办法，服务器如果有宝塔控制面板，可以更轻松搞定，网点选择伪静态，菜单下拉选择typecho，内容如下：</p>
 <pre class="notranslate"><code class="notranslate">if (!-e $request_filename) {
       rewrite ^(.*)$ /index.php$1 last;
@@ -150,7 +156,7 @@ console.log("\n %c Gmeek main https://github.com/Meekdai/Gmeek \n","padding:5px 
 
 <script>
 document.getElementById("pathHome").setAttribute("d",IconList["home"]);
-
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 
 
 

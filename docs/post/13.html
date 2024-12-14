@@ -67,6 +67,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         </svg>
     </a>
     
+    <a href="https://github.com/chaizib/chaizib.github.io/issues/13" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
 
     <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
         <svg class="octicon" width="16" height="16" >
@@ -79,25 +85,25 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <div id="content">
 <div class="markdown-body" id="postBody"><p>  作为一个HIPS和沙盘的重度患者，<a href="https://chaizi.cc/" rel="nofollow">柴子</a>用过很多款手工HIPS和沙盘，最喜欢的就是Real-time Defender Professional和Sandboxie，简直都可以算是一种情结，嗯，RS情结，简称“日死”。</p>
 <p>  刚才用蛋蛋的ID去卡饭看看有没有神马新鲜的奇技淫巧，忽然看到有人在介绍367安全盾，帖子已经盖了四页的楼，具体详细地址就不贴了，有ID有兴趣的自己去扒。367安全盾这名字听起来就很蛋疼，比360还多了7招，去首页看看先：</p>
-<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213115221735.png></p>
+<p><img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213115221735.png></p>
 <p>  很牛逼的简介，国产软件的通病，先吹了再说，关键字：完全 颠覆 无法 超强 确保 … 是骡子是马拉出来溜溜，二话不说，下载，上虚拟机跑一跑再说</p>
 <p>  虚拟机环境：<strong>vmware6.52＋windows XP SP3 纯净全补丁『无其他安全软件』</strong></p>
 <p>  安装过程不表，一路下一步，安装完之后，软件界面，嘿嘿，UI的感觉自己评价</p>
-<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213115258717.png></p>
+<p><img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213115258717.png></p>
 <p>  小试了一下其367安全浏览器，其程序调用情况懒得装别的软件来跟，直接用Process Explorer看进程。<br>
 是不是感觉很熟悉的几个进程？start.exe→SandboxieRpcSs.exe SandboxieDcomLaunch.exe 嘿嘿，这不就是传说中的Sandboxie么</p>
 <p>  不需要别的怎么扒了，看看服务项，貌似也多了一个十分熟悉的<strong>Sandboxie Service</strong></p>
-<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213115331615.png></p>
+<p><img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213115331615.png></p>
 <p>  然后我们去看看安装目录和服务中显示的路径C:\WINDOWS\Shield</p>
-<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213115405001.png></p>
+<p><img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213115405001.png></p>
 <p>  想起来了，刚才运行了一下367安全浏览器，来看看有没有残余。凭着使用Sandboxie的习惯。。找到了</p>
-<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213115441667.png></p>
+<p><img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213115441667.png></p>
 <p>  嗯，这些都是浮云都是浮云，也许是借鉴或者模仿呢？拿出xetur看看钩子和服务：</p>
-<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213115514363.png></p>
-<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213115534008.png></p>
-<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213115613737.png></p>
+<p><img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213115514363.png></p>
+<p><img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213115534008.png></p>
+<p><img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213115613737.png></p>
 <p>  然后我关闭367安全盾，来看看丫的Sandboxie目录，直接运行看看设置了些啥，原来。。。原来是这么静默的幕后黑手啊。</p>
-<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213115640727.png></p>
+<p><img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213115640727.png></p>
 <p>  当然，这些都是浮云，都是浮云，眼见未必为实，也许只是长得像的完全模仿呢，经查证，这里显示的版本是Sandboxie3.442.0.0，我们来做个文件MD5 sha1校验：</p>
 <pre class="notranslate"><code class="notranslate">文件: C:\WINDOWS\Shield\SbieDrv.sys
 大小: 115944 字节
@@ -165,7 +171,7 @@ CRC32: 249E2C70
 </code></pre>
 <p>  对比结果完全一致。。不用多说什么了吧，完完全全自己用易语言『山寨软件编程必备的玩意』写了一个壳子，所有的防护均由Sandboxie在后台默默完成『真是做好事不留名的好雷锋叔叔啊』，并且比较淫荡的是表面完全看不出痕迹，一切都是367，一切都是367… 做人可以这么无耻山寨的么？</p>
 <p>  最后细心的仔细看了一下，终于在安装界面看到这么一句话：</p>
-<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213115741361.png></p>
+<p><img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213115741361.png></p>
 <p>  原来还是怕版权纠纷啊。不过我想问的是，367你们的Sandboxie是正版授权么，还是自己拿算号机算出来的？在Sandboxie已经推出版本到3.5的今天为什么你们还在用3.442是怕联网验证搞不定么？为什么不用联网验证前的最后版本3.46是怕和windows补丁冲突么？</p>
 <p>  柴评：367安全盾很无耻，很山寨，很猥琐。所有的亮点就是那个易语言编写的山寨无比的UI界面，最恶心的是没有在显眼位置标注Sandboxie版权『到此时我对版权依然保持疑问，有心的朋友可以给作者tzuk联系一下』。比较搞笑的是那个“安全开启电脑”其实就是把explorer.exe在沙盘下运行。大哥啊，shell丢进沙盘是谁给你推荐的哇，这个也叫安全开启电脑？另：那个挂机锁 可不可以也直接OEM别人的，体积要小得多了- -!</p>
 <p>  PS：直接运行UI界面的“安全打开浏览器”或者桌面的“367安全浏览器”都默认打开页面 “<a href="http://www.36711.com%E2%80%9D" rel="nofollow">http://www.36711.com”</a> ，你说你龊不龊，山寨就山寨，还不忘记给自己网站刷点流量……</p>
@@ -224,7 +230,7 @@ console.log("\n %c Gmeek main https://github.com/Meekdai/Gmeek \n","padding:5px 
 
 <script>
 document.getElementById("pathHome").setAttribute("d",IconList["home"]);
-
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 
 
 

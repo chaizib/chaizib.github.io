@@ -12,7 +12,7 @@ RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
 ```
 &emsp;&emsp;然后typecho后台 “设置”--“永久链接”中启用rewrite功能即可。
 
-`Gmeek-html<img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213150858631.png>`
+`Gmeek-html<img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213150858631.png>`
 
 &emsp;&emsp;其实还有更简洁的办法，服务器如果有宝塔控制面板，可以更轻松搞定，网点选择伪静态，菜单下拉选择typecho，内容如下：
 

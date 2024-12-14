@@ -57,6 +57,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         </svg>
     </a>
     
+    <a href="https://github.com/chaizib/chaizib.github.io/issues/16" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
 
     <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
         <svg class="octicon" width="16" height="16" >
@@ -68,7 +74,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><p>  再也不能忍受myentunnel老是卡顿卡顿的，于是打算用AutoHotkey写个小玩意来代替。初步搞了一会，基本上myentunnel能做到的都能做到了，比如断线重连和隐藏plink.exe的黑窗口。至于如何实现账号密码记忆和保存，这个懒得写了，要写的话又得去看帮助文档…… 眼睛疼！</p>
-<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213120824123.png></p>
+<p><img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213120824123.png></p>
 <p>  基本上不需要什么说明了吧，反正也没有什么功能：</p>
 <ul>
 <li>1：需要自己有ssh账号密码『废话』</li>
@@ -77,7 +83,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>4：运行时会检测本目录下是否有plink.exe，无则释放有则跳过『方便自己手动更新』</li>
 </ul>
 <p>  附记：发帖后本坛的ss大牛给柴子回复了一个更强大的 - -!</p>
-<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213120941568.png></p>
+<p><img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213120941568.png></p>
 </div>
 <div style="font-size:small;margin-top:8px;float:right;">🤝 转载请注明出处，谢谢！🤝</div>
 
@@ -133,7 +139,7 @@ console.log("\n %c Gmeek main https://github.com/Meekdai/Gmeek \n","padding:5px 
 
 <script>
 document.getElementById("pathHome").setAttribute("d",IconList["home"]);
-
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 
 
 

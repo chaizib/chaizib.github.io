@@ -67,6 +67,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         </svg>
     </a>
     
+    <a href="https://github.com/chaizib/chaizib.github.io/issues/55" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
 
     <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
         <svg class="octicon" width="16" height="16" >
@@ -87,7 +93,7 @@ REG_DWORD, HKEY_CURRENT_USER, Software\Psiphon3,UserSkipProxySettings,1
 REG_DWORD, HKEY_CURRENT_USER, Software\Psiphon3,UserSkipVPN,1
 </code></pre>
 <p>  ssh模式下，psiphon3.exe会释放两个文件??.tmp到系统temp文件夹，其中一个连接ssh并设置代理端口socks5 1080，另外一个转换sock5代理到http:8080。比较有趣的地方在这里，直接看图：</p>
-<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213141611664.png></p>
+<p><img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213141611664.png></p>
 <p>  是不是很熟悉，嘿嘿，plink啊plink，参见plink参数详解：<a href="http://the.earth.li/%7Esgtatham/putty/0.61/htmldoc/Chapter7.html#plink" rel="nofollow">http://the.earth.li/~sgtatham/pu ... Chapter7.html#plink</a>   ，可以很轻松的看出来psiphon的ssh账号就是：</p>
 <pre class="notranslate"><code class="notranslate">sever: 
 69.90.151.45
@@ -154,7 +160,7 @@ console.log("\n %c Gmeek main https://github.com/Meekdai/Gmeek \n","padding:5px 
 
 <script>
 document.getElementById("pathHome").setAttribute("d",IconList["home"]);
-
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 
 
 

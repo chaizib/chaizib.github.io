@@ -12,7 +12,7 @@ REG_DWORD, HKEY_CURRENT_USER, Software\Psiphon3,UserSkipVPN,1
 ```
 &emsp;&emsp;ssh模式下，psiphon3.exe会释放两个文件??.tmp到系统temp文件夹，其中一个连接ssh并设置代理端口socks5 1080，另外一个转换sock5代理到http:8080。比较有趣的地方在这里，直接看图：
 
-`Gmeek-html<img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213141611664.png>`
+`Gmeek-html<img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213141611664.png>`
 
 &emsp;&emsp;是不是很熟悉，嘿嘿，plink啊plink，参见plink参数详解：[http://the.earth.li/~sgtatham/pu ... Chapter7.html#plink](http://the.earth.li/%7Esgtatham/putty/0.61/htmldoc/Chapter7.html#plink)   ，可以很轻松的看出来psiphon的ssh账号就是：
 
