@@ -38,7 +38,7 @@ MsgBox % Res
 
 ### 风骚解法2：
 
-`Gmeek-html<img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213133354204.png>`
+`Gmeek-html<img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213133354204.png>`
 
 ```
 increment := 3, square := 1
