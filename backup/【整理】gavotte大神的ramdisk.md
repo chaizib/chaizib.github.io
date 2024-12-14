@@ -23,6 +23,6 @@
 - 1：放虚拟内存文件到内存盘，这是一个好主意，不过意义不大，除非你能逆天到有足够内存虚拟一个4G的内存盘。
 -  2：开启PAE模式失败的，可以查看下是不是硬件不支持。运行everest，如图：
 
-`Gmeek-html<img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213141124244.png>`
+`Gmeek-html<img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213141124244.png>`
 
 <!-- ##{"timestamp":1316917536}## -->
