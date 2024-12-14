@@ -103,7 +103,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </li>
 </ul>
 <p>我个人使用的就是蓝冰引导器，其目录结构如下（下文将以此目录为示范，不再解释）</p>
-<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213142205870.png></p>
+<p><img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213142205870.png></p>
 <h3>优化参数</h3>
 <p>  用引导器启动火狐后，先设置中文（见上文），然后继续优化相关参数，在about:config中设置如下（#后为说明注释，非选项或者填写内容；个人倾向严重，自己看注释决定）：</p>
 <p>  新建字符串browser.cache.disk.parent_directory ，在弹出对话框输入缓存路径，比如我的是设置缓存目录到内存盘G:\Temp\Firefox</p>
@@ -192,13 +192,13 @@ menu[id="bookmarksToolbarFolderMenu"]+menuseparator {display: none !important;}
 </code></pre>
 <h3>扩展插件推荐</h3>
 <p>  直到现在，还有很多人搞不清楚扩展和插件的区别，直接上图：</p>
-<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213142659185.png></p>
-<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213142712778.png></p>
+<p><img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213142659185.png></p>
+<p><img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213142712778.png></p>
 <h3>油猴子、UC脚本推荐</h3>
 <p>  最好使用我上文提供的油猴子旧版本扩展，不要自行下载最新版，否则部分脚本会失效，比如try_again.user.js</p>
-<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213142910219.png></p>
+<p><img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213142910219.png></p>
 <p>  安装完扩展userChromeJS-1.2.xpi后，用记事本打开FF\profiles\chrome\userChrome.js，最后一行添加【 userChrome.import("*", "UChrm"); 】，便能正常使用UC脚本，下载UC脚本至FF\profiles\chrome目录即可（重启浏览器生效）</p>
-<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213142944557.png></p>
+<p><img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213142944557.png></p>
 <p>  <strong>IEView.uc.js</strong>：个人相当欣赏的脚本，现在不兼容火狐only IE的不规范站点是越来越少了，所以没必要为了那种一个月不见得浏览一次的垃圾站点而安装IE Tab这种庞然大物，直接用右键菜单调用IE或者其他浏览器打开就行（支持空白处右键打开该页，或者链接处打开该链接），我的脚本默认是theworld，修改成IE只须两处：第7行的\u7528TheWorld\u67E 名称部分，可以替换成IE；第30行的路径 D:\soft\TheWorld\TheWorld.exe 替换成 %ProgramFiles%\Internet Explorer\IEXPLORE.EXE 即可。</p>
 <p>  其他油猴子脚本，有很多被我二次修改过，在此就不一一细说了，火狐玩的就是一个折腾。油猴子和UC脚本下载地址：<a href="http://dl.dbank.com/c035ak7bu3" rel="nofollow">http://dl.dbank.com/c035ak7bu3</a></p>
 <h3>个人分享</h3>
@@ -267,11 +267,11 @@ return "DIRECT";}
 </code></pre>
 <p>  注意一点即可，除了红色部分的最后一行外，前面的网址后记得有英文逗号(我是经常忘的- -#)。示例的是socks5代理端口7070，如果是http代理的话，则替换上文绿色部分为PROXY 127.0.0.1:1080 （以http代理端口1080为例）</p>
 <p>  proxy搭配前面推荐扩展multiproxy，效果极好。打开multiproxy ，新建一个auto的代理设置让其读取proxy.txt的内容，自动选择是否走代理，如图：</p>
-<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213143338335.png></p>
+<p><img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213143338335.png></p>
 <p>  然后新建一个all来全局走代理，如图：</p>
-<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213143400022.png></p>
+<p><img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213143400022.png></p>
 <p>  最后来张裸照：</p>
-<p><img src=https://cdn.jsdelivr.net/gh/chaizia/pic/img/20241213143420597.png></p>
+<p><img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20241213143420597.png></p>
 </div>
 <div style="font-size:small;margin-top:8px;float:right;">🤝 转载请注明出处，谢谢！🤝</div>
 
