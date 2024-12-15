@@ -22,5 +22,5 @@
     "exlink":{"ysepan":"http://niels.ysepan.com"},
     "primerCSS":"<link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />",
     "needComment":0,
-    "GMEEK_VERSION":"main"
+    "GMEEK_VERSION":"master"
 }
