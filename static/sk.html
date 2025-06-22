@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水雨情信息监测系统</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background: #f5f7fa;
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .header {
+            text-align: center;
+            margin: 20px 0 30px;
+            width: 100%;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #1a3a6e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            color: #4a5568;
+        }
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            max-width: 1400px;
+            width: 100%;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            width: 100%;
+            max-width: 650px;
+        }
+        
+        .card-header {
+            background: #2c5282;
+            color: white;
+            padding: 16px 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .card-header i {
+            font-size: 1.5rem;
+        }
+        
+        .card-header h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .card-content {
+            padding: 20px;
+        }
+        
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            min-width: 600px;
+        }
+        
+        thead {
+            background: #ebf8ff;
+        }
+        
+        th {
+            padding: 14px 12px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #2d3748;
+            border-bottom: 2px solid #cbd5e0;
+        }
+        
+        td {
+            padding: 14px 12px;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 1.05rem;
+            color: #4a5568;
+        }
+        
+        tbody tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+        
+        tbody tr:hover {
+            background-color: #ebf8ff;
+        }
+        
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            flex-direction: column;
+            color: #718096;
+        }
+        
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(44, 82, 130, 0.2);
+            border-top: 4px solid #2c5282;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 15px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .last-update {
+            text-align: center;
+            margin-top: 30px;
+            color: #4a5568;
+            font-size: 1rem;
+            background: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            color: #718096;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.95rem;
+        }
+        
+        .data-info {
+            margin-top: 10px;
+            text-align: center;
+            color: #718096;
+            font-size: 0.95rem;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .header p {
+                font-size: 1rem;
+                padding: 0 15px;
+            }
+            
+            .card-header h2 {
+                font-size: 1.3rem;
+            }
+            
+            th, td {
+                padding: 12px 10px;
+                font-size: 0.95rem;
+            }
+            
+            .table-container {
+                min-width: 100%;
+            }
+            
+            table {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1><i class="fas fa-tint"></i> 水雨情信息监测系统</h1>
+        <p>实时展示水库站和河道站的水位、流量等关键数据，为防汛抗旱决策提供科学依据</p>
+    </div>
+    
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-dam"></i>
+                <h2>水库站实时数据</h2>
+            </div>
+            <div class="card-content">
+                <div class="table-container">
+                    <table class="table-container-one">
+                        <thead>
+                            <tr>
+                                <th>水库站</th>
+                                <th>时间</th>
+                                <th>水位(m)</th>
+                                <th>入(m³/s)</th>
+                                <th>出(m³/s)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-one">
+                            <tr class="loading">
+                                <td colspan="5">
+                                    <div class="spinner"></div>
+                                    <p>正在加载水库站数据...</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="data-info">共 <span id="reservoir-count">0</span> 条水库站数据</div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-river"></i>
+                <h2>河道站实时数据</h2>
+            </div>
+            <div class="card-content">
+                <div class="table-container">
+                    <table class="table-container-two">
+                        <thead>
+                            <tr>
+                                <th>河道站</th>
+                                <th>时间</th>
+                                <th>水位(m)</th>
+                                <th>流量(m³/s)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-two">
+                            <tr class="loading">
+                                <td colspan="4">
+                                    <div class="spinner"></div>
+                                    <p>正在加载河道站数据...</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="data-info">共 <span id="river-count">0</span> 条河道站数据</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="last-update">
+        <i class="fas fa-sync-alt"></i> 数据最后更新时间: <span id="update-time">--:--:--</span>
+    </div>
+    
+    <div class="footer">
+        <p>水雨情监测系统 © 2023 | 数据来源：实时水文监测网络</p>
+    </div>
+    
+    <script>
+        // 获取当前时间并格式化
+        function getCurrentTime() {
+            const now = new Date();
+            return now.toLocaleTimeString('zh-CN', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+        }
+        
+        // 更新页面上的时间显示
+        document.getElementById('update-time').textContent = getCurrentTime();
+        
+        // 格式化API返回的日期
+        function formatDate(dateString) {
+            if (!dateString) return "--";
+            const date = new Date(dateString);
+            const month = date.getMonth() + 1;
+            const day = date.getDate();
+            const hours = date.getHours();
+            return `${month}月${day}日${hours}时`;
+        }
+        
+        // 主函数：获取数据并渲染
+        async function fetchData() {
+            try {
+                const response = await axios.get('https://zhsl.sanxiacloud.com/ys-gw/ys-slyzt/web/api/listSkhdSj');
+                const data = response.data.data;
+                
+                // 更新数据时间
+                document.getElementById('update-time').textContent = getCurrentTime();
+                
+                // 渲染水库站数据
+                const containerOne = document.getElementById('tbody-one');
+                containerOne.innerHTML = '';
+                
+                if (data.sksjList && data.sksjList.length > 0) {
+                    data.sksjList.forEach(item => {
+                        const tr = document.createElement('tr');
+                        tr.innerHTML = `
+                            <td>${item.stName || "--"}</td>
+                            <td>${formatDate(item.tm)}</td>
+                            <td>${item.rz || "--"}</td>
+                            <td>${item.inq || "--"}</td>
+                            <td>${item.otq || "--"}</td>
+                        `;
+                        containerOne.appendChild(tr);
+                    });
+                    
+                    // 更新数据计数
+                    document.getElementById('reservoir-count').textContent = data.sksjList.length;
+                } else {
+                    containerOne.innerHTML = '<tr><td colspan="5" style="text-align: center; padding: 40px 0; color: #718096;">暂无水库站数据</td></tr>';
+                    document.getElementById('reservoir-count').textContent = '0';
+                }
+                
+                // 渲染河道站数据
+                const containerTwo = document.getElementById('tbody-two');
+                containerTwo.innerHTML = '';
+                
+                if (data.hdsjList && data.hdsjList.length > 0) {
+                    data.hdsjList.forEach(item => {
+                        const tr = document.createElement('tr');
+                        tr.innerHTML = `
+                            <td>${item.stName || "--"}</td>
+                            <td>${formatDate(item.tm)}</td>
+                            <td>${item.z || "--"}</td>
+                            <td>${item.q || "--"}</td>
+                        `;
+                        containerTwo.appendChild(tr);
+                    });
+                    
+                    // 更新数据计数
+                    document.getElementById('river-count').textContent = data.hdsjList.length;
+                } else {
+                    containerTwo.innerHTML = '<tr><td colspan="4" style="text-align: center; padding: 40px 0; color: #718096;">暂无河道站数据</td></tr>';
+                    document.getElementById('river-count').textContent = '0';
+                }
+                
+            } catch (error) {
+                console.error('数据获取失败:', error);
+                
+                // 显示错误信息
+                const containerOne = document.getElementById('tbody-one');
+                containerOne.innerHTML = '<tr><td colspan="5" style="text-align: center; padding: 40px 0; color: #e53e3e;"><i class="fas fa-exclamation-triangle"></i> 数据加载失败，请稍后重试</td></tr>';
+                document.getElementById('reservoir-count').textContent = '0';
+                
+                const containerTwo = document.getElementById('tbody-two');
+                containerTwo.innerHTML = '<tr><td colspan="4" style="text-align: center; padding: 40px 0; color: #e53e3e;"><i class="fas fa-exclamation-triangle"></i> 数据加载失败，请稍后重试</td></tr>';
+                document.getElementById('river-count').textContent = '0';
+            }
+        }
+        
+        // 页面加载完成后获取数据
+        document.addEventListener('DOMContentLoaded', fetchData);
+        
+        // 每10分钟自动刷新数据
+        setInterval(fetchData, 10 * 60 * 1000);
+        
+        // 添加手动刷新按钮功能
+        document.querySelector('.last-update').addEventListener('click', function() {
+            this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 数据刷新中...';
+            fetchData().finally(() => {
+                this.innerHTML = '<i class="fas fa-sync-alt"></i> 数据最后更新时间: <span id="update-time">' + getCurrentTime() + '</span>';
+            });
+        });
+    </script>
+</body>
+</html>
