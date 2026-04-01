@@ -27,7 +27,9 @@ TZ='Asia/Shanghai' /bin/bash /root/505/vps_monitor.sh --report
 ```
 
 ### 写入任务 (日报 09:00 + 记账每 5 分钟) + 强制指定北京时间
-`(crontab -l 2>/dev/null | grep -v "vps_monitor.sh"; echo "0 9 * * * TZ='Asia/Shanghai' /bin/bash /root/505/vps_monitor.sh --report >/dev/null 2>&1"; echo "*/5 * * * * TZ='Asia/Shanghai' /bin/bash /root/505/vps_monitor.sh >/dev/null 2>&1") | crontab - && crontab -l`
+```
+(crontab -l 2>/dev/null | grep -v "vps_monitor.sh"; echo "0 9 * * * TZ='Asia/Shanghai' /bin/bash /root/505/vps_monitor.sh --report >/dev/null 2>&1"; echo "*/5 * * * * TZ='Asia/Shanghai' /bin/bash /root/505/vps_monitor.sh >/dev/null 2>&1") | crontab - && crontab -l
+```
 
 效果如下（仅为示例，实际部署可能略有偏差）：
 `Gmeek-html<img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20260401141604733.png>`

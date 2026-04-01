@@ -103,7 +103,8 @@ apt-get update &amp;&amp; apt-get install -y curl awk grep flock
 TZ='Asia/Shanghai' /bin/bash /root/505/vps_monitor.sh --report
 </code></pre>
 <h3>写入任务 (日报 09:00 + 记账每 5 分钟) + 强制指定北京时间</h3>
-<p><code class="notranslate">(crontab -l 2&gt;/dev/null | grep -v "vps_monitor.sh"; echo "0 9 * * * TZ='Asia/Shanghai' /bin/bash /root/505/vps_monitor.sh --report &gt;/dev/null 2&gt;&amp;1"; echo "*/5 * * * * TZ='Asia/Shanghai' /bin/bash /root/505/vps_monitor.sh &gt;/dev/null 2&gt;&amp;1") | crontab - &amp;&amp; crontab -l</code></p>
+<pre class="notranslate"><code class="notranslate">(crontab -l 2&gt;/dev/null | grep -v "vps_monitor.sh"; echo "0 9 * * * TZ='Asia/Shanghai' /bin/bash /root/505/vps_monitor.sh --report &gt;/dev/null 2&gt;&amp;1"; echo "*/5 * * * * TZ='Asia/Shanghai' /bin/bash /root/505/vps_monitor.sh &gt;/dev/null 2&gt;&amp;1") | crontab - &amp;&amp; crontab -l
+</code></pre>
 <p>效果如下（仅为示例，实际部署可能略有偏差）：<br>
 <img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/20260401141604733.png></p>
 <h3>总结</h3>
