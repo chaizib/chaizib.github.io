@@ -14,7 +14,7 @@
 apt-get update && apt-get install -y curl awk grep flock
 ```
 创建脚本并添加内容：
-`mkdir -p /root/505 && cd /root/505 vps_monitor.sh`
+`mkdir -p /root/505 && cd /root/505`
 
 在该目录下创建脚本vps_monitor.sh，脚本内容如下：
 [下载后修改13-19行内容](https://raw.githubusercontent.com/chaizib/Profiles/master/Mylist/vps_monitor.sh)
