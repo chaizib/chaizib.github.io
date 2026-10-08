@@ -39,7 +39,7 @@
 ```
   Vercel 给出的目标地址见下图：
 
-`Gmeek-html<img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/https://files.seeusercontent.com/2026/10/08/hwM5/domain.jpg>`
+`Gmeek-html<img src=https://files.seeusercontent.com/2026/10/08/hwM5/domain.jpg>`
 
   保存后等待几秒，Vercel 会自动签发 SSL 证书，大功告成！
 
