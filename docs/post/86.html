@@ -78,8 +78,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><p>  以前想上线一个简单的静态网页，流程往往挺让人头疼：要么丢到自建的 VPS 上，不仅要配 Nginx、调防火墙，还得定期操心 acme.sh 的 HTTPS 证书续期；要么托管到 GitHub Pages或者Cloudflare Pages，但国内直连的访问速度实在一言难尽。</p>
-<p>  最近折腾完一套新方案，真香：GitHub 私有仓库 + Vercel 托管 + Cloudflare 自定义域名。不仅完全免费（白嫖 Vercel 每月 100GB 流量），全程不需要在本地电脑安装任何开发环境，而且国内访问速度飞起，连证书都不用自己维护了。</p>
-<p>  今天就把这套方案的完整玩法、核心优势以及横向对比盘点一下。</p>
+<p>  今天刚折腾完一套新方案，真香：GitHub 私有仓库 + Vercel 托管 + Cloudflare 自定义域名。不仅完全免费（白嫖 Vercel 每月 100GB 流量），全程不需要在本地电脑安装任何开发环境，而且国内访问速度飞起，连证书都不用自己维护了。</p>
+<p>  现在就把这套方案的完整玩法、核心优势以及横向对比盘点一下。</p>
 <h3>一、 为什么一定要用“私有仓库”？</h3>
 <p>  在动手之前，很多人会有一个顾虑：“网页源码放在 GitHub 上，别人岂不是全都能看光？”</p>
 <p>  其实完全不用担心。把 GitHub 仓库设置为私有（Private），对 Vercel 的部署没有任何影响。</p>
