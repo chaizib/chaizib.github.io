@@ -37,7 +37,11 @@
   Target 填 Vercel 给出的目标地址（如 cname.vercel-dns-015.com.）。
   Proxy status（代理状态）：务必保持灰色（DNS only / 直连模式）。
 ```
-保存后等待几秒，Vercel 会自动签发 SSL 证书，大功告成！
+  Vercel 给出的目标地址见下图：
+
+`Gmeek-html<img src=https://testingcf.jsdelivr.net/gh/chaizia/pic/img/https://files.seeusercontent.com/2026/10/08/hwM5/domain.jpg>`
+
+  保存后等待几秒，Vercel 会自动签发 SSL 证书，大功告成！
 
 ### 三、 以后怎么更新页面？
 
