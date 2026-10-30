@@ -148,19 +148,19 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <h3>4. 颜值：带“蓝色竖纹”的 UI 设计</h3>
 <p>为了让看板看起来像“工业级监控”，左侧的一道蓝色侧边条是视觉灵魂。</p>
 <div class="highlight highlight-source-css"><pre class="notranslate"><span class="pl-c">/* 专属侧边纹样式 */</span>
-.<span class="pl-c1">card</span> {
-    <span class="pl-c1">background</span><span class="pl-kos">:</span> <span class="pl-pds"><span class="pl-kos">#</span>fff</span>;
-    <span class="pl-c1">border-radius</span><span class="pl-kos">:</span> <span class="pl-c1">20<span class="pl-smi">px</span></span>;
-    <span class="pl-c1">border-left</span><span class="pl-kos">:</span> <span class="pl-c1">5<span class="pl-smi">px</span></span> solid <span class="pl-pds"><span class="pl-kos">#</span>3b82f6</span>; <span class="pl-c">/* 这道蓝纹就是格调 */</span>
-    <span class="pl-c1">box-shadow</span><span class="pl-kos">:</span> <span class="pl-c1">0</span> <span class="pl-c1">10<span class="pl-smi">px</span></span> <span class="pl-c1">25<span class="pl-smi">px</span></span> <span class="pl-en">rgba</span>(<span class="pl-c1">0</span><span class="pl-kos">,</span><span class="pl-c1">0</span><span class="pl-kos">,</span><span class="pl-c1">0</span><span class="pl-kos">,</span><span class="pl-c1">0.05</span>);
-    <span class="pl-c1">padding</span><span class="pl-kos">:</span> <span class="pl-c1">26<span class="pl-smi">px</span></span>;
-}
+<span class="pl-kos">.</span><span class="pl-c1">card</span> <span class="pl-kos">{</span>
+    <span class="pl-c1">background</span><span class="pl-kos">:</span> <span class="pl-pds"><span class="pl-kos">#</span>fff</span><span class="pl-kos">;</span>
+    <span class="pl-c1">border-radius</span><span class="pl-kos">:</span> <span class="pl-c1">20<span class="pl-smi">px</span></span><span class="pl-kos">;</span>
+    <span class="pl-c1">border-left</span><span class="pl-kos">:</span> <span class="pl-c1">5<span class="pl-smi">px</span></span> solid <span class="pl-pds"><span class="pl-kos">#</span>3b82f6</span><span class="pl-kos">;</span> <span class="pl-c">/* 这道蓝纹就是格调 */</span>
+    <span class="pl-c1">box-shadow</span><span class="pl-kos">:</span> <span class="pl-c1">0</span> <span class="pl-c1">10<span class="pl-smi">px</span></span> <span class="pl-c1">25<span class="pl-smi">px</span></span> <span class="pl-en">rgba</span><span class="pl-kos">(</span><span class="pl-c1">0</span><span class="pl-kos">,</span><span class="pl-c1">0</span><span class="pl-kos">,</span><span class="pl-c1">0</span><span class="pl-kos">,</span><span class="pl-c1">0.05</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
+    <span class="pl-c1">padding</span><span class="pl-kos">:</span> <span class="pl-c1">26<span class="pl-smi">px</span></span><span class="pl-kos">;</span>
+<span class="pl-kos">}</span>
 
 <span class="pl-c">/* 红色倒计时数字 */</span>
-.<span class="pl-c1">days-red</span> {
-    <span class="pl-c1">color</span><span class="pl-kos">:</span> <span class="pl-pds"><span class="pl-kos">#</span>ef4444</span>; <span class="pl-c">/* 醒目红，增加危机感 */</span>
-    <span class="pl-c1">font-weight</span><span class="pl-kos">:</span> <span class="pl-c1">800</span>;
-}</pre></div>
+<span class="pl-kos">.</span><span class="pl-c1">days-red</span> <span class="pl-kos">{</span>
+    <span class="pl-c1">color</span><span class="pl-kos">:</span> <span class="pl-pds"><span class="pl-kos">#</span>ef4444</span><span class="pl-kos">;</span> <span class="pl-c">/* 醒目红，增加危机感 */</span>
+    <span class="pl-c1">font-weight</span><span class="pl-kos">:</span> <span class="pl-c1">800</span><span class="pl-kos">;</span>
+<span class="pl-kos">}</span></pre></div>
 <h3>5. 避坑结案陈词（安全建议）</h3>
 <ol>
 <li>Token 隔离：代码里的 API_KEY 只要不分享、不提交到 GitHub，它就是绝对安全的。</li>
